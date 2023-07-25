@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MRI LifeRay UI Tests" parallel="tests" thread-count="3" verbose="2">
+    <test name="Landing Page Tests">
+        <parameter name="browser" value="remote_chrome"/>
+        <classes>
+            <class name="com.musicreports.qa.HomePageTests">
+                <methods>
+                    <include name="assertTitleTests"/>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+    <test name="Multiple Windows Tests">
+        <parameter name="browser" value="remote_edge"/>
+        <classes>
+            <class name="com.musicreports.qa.HomePageTests">
+                <methods>
+                    <include name="assertTitleTests"/>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+    <test name="Data table Tests">
+        <parameter name="browser" value="remote_firefox"/>
+        <classes>
+            <class name="com.musicreports.qa.HomePageTests">
+                <methods>
+                    <include name="assertTitleTests"/>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->
